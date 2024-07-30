@@ -116,7 +116,7 @@
 
                     <!-- published -->
                     <span v-else-if="props.column.field === 'published'">
-                        <span v-if="props.row.published === true" @click="updatePublishedStatus(props.row.id)" style="cursor: pointer"><b-badge pill variant="light-success">Published</b-badge></span>
+                        <span v-if="props.row.published === true"><b-badge pill variant="light-success">Published</b-badge></span>
                         <span v-else @click="updatePublishedStatus(props.row.id)" style="cursor: pointer"><b-badge pill variant="light-danger">Not Published</b-badge></span>
                     </span>
 

@@ -193,10 +193,9 @@
                                                                                 </div>
                                                                                 <br />
                                                                                 <div style="text-align: left;">
-                                                                                    <!-- <a :href="fo.link" target="_blank"><img src="https://api-swissnews.smicee.com/media/readmore.png" alt=""></a> -->
-                                                                                    <a v-if="fo.link" :href="fo.link" target="_blank">
-                                                                                        <button style="border-width: 0px; background-color: #00477A; color: #ffffff; font-size: small; border-radius: 3px; padding: 2px 8px;">Read More</button>
-                                                                                    </a>
+                                                                                    <div v-if="fo.link" style="text-align: left;">
+                                                                                        <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                    </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -221,9 +220,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <br />
-                                                                                <a v-if="fo.link" :href="fo.link" target="_blank">
-                                                                                    <button style="border-width: 0px; background-color: #00477A; color: #ffffff; font-size: small; border-radius: 3px; padding: 2px 8px;">Read More</button>
-                                                                                </a>
+                                                                                <div v-if="fo.link" style="text-align: left;">
+                                                                                    <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -247,9 +246,9 @@
                                                                                     </div>
                                                                                 </div>
                                                                                 <br />
-                                                                                <a v-if="fo.link" :href="fo.link" target="_blank">
-                                                                                    <button style="border-width: 0px; background-color: #00477A; color: #ffffff; font-size: small; border-radius: 3px; padding: 2px 8px;">Read More</button>
-                                                                                </a>
+                                                                                <div v-if="fo.link" style="text-align: left;">
+                                                                                    <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div> 
@@ -271,11 +270,9 @@
                                                                                                 <span>{{ fo.details }}</span>
                                                                                             </div>
                                                                                             <br />
-                                                                                            <span v-if="fo.link">
-                                                                                                <a :href="fo.link" target="_blank">
-                                                                                                    <button style="border-width: 0px; background-color: #00477A; color: #ffffff; font-size: small; border-radius: 3px; padding: 2px 8px;">Read More</button>
-                                                                                                </a>
-                                                                                            </span>
+                                                                                            <div v-if="fo.link" style="text-align: left;">
+                                                                                                <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -292,12 +289,10 @@
                                                                                             <div v-if="fo.details" style="text-align: justify; color: #1E1E1E;">
                                                                                                 <span>{{ fo.details }}</span>
                                                                                             </div>
-                                                                                            <span v-if="fo.link">
+                                                                                            <div v-if="fo.link" style="text-align: left;">
                                                                                                 <br />
-                                                                                                <a :href="fo.link" target="_blank">
-                                                                                                    <button style="border-width: 0px; background-color: #00477A; color: #ffffff; font-size: small; border-radius: 3px; padding: 2px 8px;">Read More</button>
-                                                                                                </a>
-                                                                                            </span>
+                                                                                                <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
                                                                                     <div>
