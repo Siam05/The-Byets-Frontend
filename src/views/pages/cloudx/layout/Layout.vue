@@ -150,6 +150,11 @@
                     </div>
 
                     <div style="display: flex; gap: 16px;">
+                        <h6 style="padding-top: 5px;">Footer Background Color Visibility:</h6>
+                        <div v-if="footerColor" @click="footerColor = false" style="background-color: #82868B; color: #ffffff; padding: 4px; height: 27px; cursor: pointer; border-radius: 4px;">Hide</div>
+                        <div v-else @click="footerColor = true" style="background-color: #00477a; color: #ffffff; padding: 4px; height: 27px; cursor: pointer; border-radius: 4px;">Visible</div>
+                    </div>
+                    <div style="display: flex; gap: 16px;">
                         <b-button style="height: 40px;" @click="saveDraft" variant="secondary">Save as Draft</b-button>
                         <b-button style="height: 40px;" @click="submitTemplate" variant="primary">Save Template</b-button>
                     </div>
@@ -320,11 +325,99 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </div> 
 
                                                                 <!-- FOOTER -->
                                                                 <div>
-                                                                    <div>
+                                                                    <div style="background-color: #00477a; color: #ffffff;" v-if="footerColor">
+                                                                        <div style="padding: 20px;">
+                                                                            <table style="width: 100%;">
+                                                                                <tbody style="width: 100%;">
+                                                                                    <tr style="width: 100%;">
+                                                                                        <td style="width: 2%;"> </td>
+                                                                                        <td align="center">
+                                                                                            <div>
+                                                                                                <div v-if="settings.country_office">
+                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                </div>
+
+                                                                                                <div v-if="settings.project_office" style="margin-top: 8px;">
+                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
+                                                                                                </div>
+
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">+00 123 456 789</span></div>
+
+                                                                                                <p v-if="settings.website" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">www.website.com</span></p>
+                                                                                            </div>
+                                                                                        </td>
+                                                                                        <td style="width: 2%;"> </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                            <table style="width: 100%;">
+                                                                                <tbody style="width: 100%;">
+                                                                                    <tr style="width: 100%; border-top-style: solid; border-bottom-style: solid; border-width: 1.5px; border-color: #7f7f7f;">
+                                                                                        <td style="width: 10%;"></td>
+                                                                                        
+                                                                                        <td style="width: 20%;" align="center">
+                                                                                            <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
+                                                                                                <a :href="settings.fb_link" target="_blank">
+                                                                                                    <div style="padding-top: 4px; padding-bottom: 4px;">
+                                                                                                        <img src="https://api-swissnews.smicee.com/media/fb.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <td style="width: 20%;" align="center">
+                                                                                            <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
+                                                                                                <a :href="settings.twitter_link" target="_blank">
+                                                                                                    <div style="padding-top: 4px; padding-bottom: 4px;">
+                                                                                                        <img src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <td style="width: 20%;" align="center">
+                                                                                            <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
+                                                                                                <a :href="settings.instagram_link" target="_blank">
+                                                                                                    <div style="padding-top: 4px; padding-bottom: 4px;">
+                                                                                                        <img src="https://api-swissnews.smicee.com/media/insta.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </td>
+
+                                                                                        <td style="width: 20%;" align="center">
+                                                                                            <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
+                                                                                                <a :href="settings.linkedin_link" target="_blank">
+                                                                                                    <div style="padding-top: 4px; padding-bottom: 4px;">
+                                                                                                        <img src="https://api-swissnews.smicee.com/media/in.jpg" alt="">
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div> 
+                                                                                        </td>
+                                                                                        <td style="width: 10%;"></td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+
+                                                                            <table style="width: 100%;">
+                                                                                <tbody style="width: 100%;">
+                                                                                    <tr style="width: 100%;">
+                                                                                        <td style="max-width: 2%;"> </td>
+                                                                                        <td style="font-size: small; padding: 12px 8px 0px;" align="center">
+                                                                                            <h7>© 2024, All Rights Reserved.</h7>
+                                                                                        </td>
+                                                                                        <td style="max-width: 2%;"> </td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div v-else>
                                                                         <div style="padding: 20px;">
                                                                             <table style="width: 100%;">
                                                                                 <tbody style="width: 100%;">
@@ -629,6 +722,7 @@ export default {
             test: true,
             host: 'https://api-swissnews.smicee.com',
             dir: false,
+            footerColor: true,
             viewPreview: false,
             hideTemplate: false,
             header: null,
