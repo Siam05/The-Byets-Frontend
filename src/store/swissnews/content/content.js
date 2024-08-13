@@ -424,6 +424,7 @@ export default {
                 async () => {
                     let payloadData={ 
                         subject: payload.subject,
+                        footerColor: payload.footerColor,
                         value: payload.value,
                         inner_html: payload.inner_html
                     }

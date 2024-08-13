@@ -334,20 +334,20 @@
                                                                             <table style="width: 100%;">
                                                                                 <tbody style="width: 100%;">
                                                                                     <tr style="width: 100%;">
-                                                                                        <td style="width: 2%;"> </td>
-                                                                                        <td align="center">
+                                                                                        <td style="width: 2%;"> </td> 
+                                                                                        <td align="center"> 
                                                                                             <div>
                                                                                                 <div v-if="settings.country_office">
-                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                    <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
                                                                                                 </div>
 
                                                                                                 <div v-if="settings.project_office" style="margin-top: 8px;">
-                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
+                                                                                                    <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">+00 123 456 789</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">+00 123 456 789</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">www.website.com</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px;"><img style="height: 17px;" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">www.website.com</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -364,7 +364,7 @@
                                                                                             <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.fb_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/fb.jpg" alt="">
+                                                                                                        <img style="height: 18px;" src="https://api-swissnews.smicee.com/media/white-fb.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -374,7 +374,7 @@
                                                                                             <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
+                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-x.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -384,7 +384,7 @@
                                                                                             <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.instagram_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/insta.jpg" alt="">
+                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-insta.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -394,7 +394,7 @@
                                                                                             <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.linkedin_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/in.jpg" alt="">
+                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-in.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div> 
@@ -463,7 +463,7 @@
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
                                                                                                         <img src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
-                                                                                                    </div>
+                                                                                                    </div> 
                                                                                                 </a>
                                                                                             </div>
                                                                                         </td>
@@ -699,6 +699,7 @@ export default {
                 ]
             }
             this.subject = this.draft.subject
+            this.footerColor = this.draft.footerColor
         }
     },
 
@@ -873,7 +874,7 @@ export default {
         submitTemplate() {
             this.innerhtml = document.getElementById('emailtemplate').innerHTML;
 
-            this.$store.dispatch('content/saveLayout', {subject: this.subject, value: this.layouts, inner_html: this.innerhtml, draft_id: this.draft_id}).then(result=>{
+            this.$store.dispatch('content/saveLayout', {subject: this.subject, footerColor: this.footerColor, value: this.layouts, inner_html: this.innerhtml, draft_id: this.draft_id}).then(result=>{
                 if(result.code == 200) {
                     this.$toast({
                         component: ToastificationContent,
@@ -887,12 +888,12 @@ export default {
                     })
                 }
             })
-        },
+        }, 
 
         saveDraft() {
             this.draft_innerhtml = document.getElementById('emailtemplate').innerHTML;
 
-            this.$store.dispatch('content/saveLayoutAsDraft', {subject: this.subject, value: this.layouts, inner_html: this.draft_innerhtml}).then(result=>{
+            this.$store.dispatch('content/saveLayoutAsDraft', {subject: this.subject, footerColor: this.footerColor, value: this.layouts, inner_html: this.draft_innerhtml}).then(result=>{
                 if(result.code == 200) {
                     this.$toast({
                         component: ToastificationContent,
