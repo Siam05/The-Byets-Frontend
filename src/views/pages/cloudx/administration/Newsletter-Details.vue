@@ -339,9 +339,9 @@
                                                                                                     <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">+00 123 456 789</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px;"><img style="height: 17px;" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">www.website.com</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img style="height: 17px;" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -427,9 +427,9 @@
                                                                                                     <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">+00 123 456 789</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">www.website.com</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
