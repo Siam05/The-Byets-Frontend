@@ -173,175 +173,228 @@
                                     <head></head>
                                     <div id="emailtemplate">
                                         <body>
-                                            <table style="width: 100%; background-color: #E4E4E4;" align="center" width="100%">
+                                            <table style="background-color: #E4E4E4;" align="center">
                                                 <tbody>
                                                     <tr>
-                                                        <td> </td>
-                                                        <td class="full-body" width="600" style="width: 600px; background-color: #ffffff;">
+                                                        <td style="width: 20px;"> </td>
+                                                        <td style="width: 600px; background-color: #ffffff;">
                                                             <div>
                                                                 <!-- HEADER -->
-                                                                <div style="width: 100%;">
-                                                                    <img style="width: 100%;" :src="settings.image" alt="">
+                                                                <div>
+                                                                    <img width="600" :src="settings.image" alt="">
                                                                 </div> 
 
                                                                 <!-- BODY -->
-                                                                <div style="width: 100%;" v-for="(fo, index) in layouts" :key="index">
+                                                                <div style="width: 600px;" v-for="(fo, index) in layouts" :key="index">
                                                                     <div v-if="fo.template == 1">
-                                                                        <div>
-                                                                            <div style="padding: 20px;">
-                                                                                <div style="width: 100%; display: flex; align-items: center;">
-                                                                                    <p style="width: 100%; font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">
-                                                                                        {{ fo.title }}
-                                                                                    </p>
-                                                                                </div>
-                                                                                <div style="text-align: justify; color: #1E1E1E;">
-                                                                                    <span>{{ fo.details }}</span>
-                                                                                </div>
-                                                                                <br />
-                                                                                <div style="text-align: left;">
-                                                                                    <div v-if="fo.link" style="text-align: left;">
-                                                                                        <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div v-else-if="fo.template == 2">
-                                                                        <div>
-                                                                            <div style="padding: 20px;">
-                                                                                <div style="width: 100%; display: flex; align-items: center;">
-                                                                                    <p style="width: 100%; font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</p>
-                                                                                </div>
-                                                                                <div style="overflow: hidden;">
-                                                                                    <div style="float: right; margin-left: 16px;">
+                                                                        <table width="600">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                    <td style="width: 560px;">
+                                                                                        <br />
                                                                                         <div>
-                                                                                            <img style="width: 200px; margin-top: 16px;" :src="fo.image" alt="">
-                                                                                            <div style="max-width: 200px; word-wrap: break-word; color: #1E1E1E;">
-                                                                                                <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
+                                                                                            <div style="display: flex; align-items: center;">
+                                                                                                <span style="font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">
+                                                                                                    {{ fo.title }}
+                                                                                                </span>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div style="text-align: justify; color: #1E1E1E;">
+                                                                                                <span>{{ fo.details }}</span>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div style="text-align: left;">
+                                                                                                <div v-if="fo.link" style="text-align: left;">
+                                                                                                    <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                    <div style="text-align: justify; color: #1E1E1E;">
-                                                                                        <span>{{ fo.details }}</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <br />
-                                                                                <div v-if="fo.link" style="text-align: left;">
-                                                                                    <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                        <br />
+                                                                                    </td>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div v-if="fo.template == 2">
+                                                                        <table width="600">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                    <td style="width: 560px;">
+                                                                                        <br />
+                                                                                        <div>
+                                                                                            <div style="display: flex; align-items: left;">
+                                                                                                <span style="font-size: x-large; font-weight: 600; text-align: left; color: #000000; line-height: 2rem;">{{ fo.title }}</span>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div style="overflow: hidden;">
+                                                                                                <div style="float: right; margin-left: 16px;">
+                                                                                                    <div>
+                                                                                                        <img width="230" :src="fo.image" alt="">
+                                                                                                        <div style="max-width: 200px; word-wrap: break-word; color: #1E1E1E;">
+                                                                                                            <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div style="text-align: justify; color: #1E1E1E;">
+                                                                                                    <span>{{ fo.details }}</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div v-if="fo.link" style="text-align: left;">
+                                                                                                <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <br />
+                                                                                    </td>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
                                                                     </div>
                                                                     <div v-else-if="fo.template == 3">
-                                                                        <div>
-                                                                            <div style="padding: 20px;">
-                                                                                <div style="width: 100%; display: flex; align-items: center;">
-                                                                                    <p style="width: 100%; font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</p>
-                                                                                </div>
-                                                                                <div style="overflow: hidden;">
-                                                                                    <div style="float: left; margin-right: 16px;">
+                                                                        <table width="600">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                    <td style="width: 560px;">
+                                                                                        <br />
                                                                                         <div>
-                                                                                            <img style="width: 200px; margin-top: 16px;" :src="fo.image" alt="">
-                                                                                            <div style="max-width: 200px; word-wrap: break-word; color: #1E1E1E;">
-                                                                                                <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
+                                                                                            <div style="display: flex; align-items: left;">
+                                                                                                <span style="width: 100%; font-size: x-large; font-weight: 600; text-align: left; color: #000000; line-height: 2rem;">{{ fo.title }}</span>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div style="overflow: hidden;">
+                                                                                                <div style="float: left; margin-right: 16px;">
+                                                                                                    <div>
+                                                                                                        <img width="230" :src="fo.image" alt="">
+                                                                                                        <div style="max-width: 200px; word-wrap: break-word; color: #1E1E1E;">
+                                                                                                            <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div style="text-align: justify; color: #1E1E1E;">
+                                                                                                    <span>{{ fo.details }}</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div v-if="fo.link" style="text-align: left;">
+                                                                                                <a :href="fo.link" target="_blank"><img height="26"src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
                                                                                             </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                    <div style="text-align: justify; color: #1E1E1E;">
-                                                                                        <span>{{ fo.details }}</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <br />
-                                                                                <div v-if="fo.link" style="text-align: left;">
-                                                                                    <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                        <br />
+                                                                                    </td>
+                                                                                    <td style="width: 20px;"> </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
                                                                     </div> 
                                                                     <div v-else-if="fo.template == 4">
-                                                                        <div>
-                                                                            <div style="padding: 20px;">
-                                                                                <div style="width: 100%;">
-                                                                                    <div style="width: 100%;">
-                                                                                        <div style="width: 100%;">
-                                                                                            <p v-if="fo.title" style="width: 100%; font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</p>
+                                                                        <table width="600">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 26px;"> </td>
+                                                                                    <td style="width: 548px;">
+                                                                                        <br />
+                                                                                        <div>
                                                                                             <div>
-                                                                                                <img style="width: 100%;" :src="fo.image" alt="">
+                                                                                                <div>
+                                                                                                    <span v-if="fo.title" style="font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</span>
+                                                                                                    <div>
+                                                                                                        <br />
+                                                                                                        <img width="547" :src="fo.image" alt="">
+                                                                                                        <div style="max-width: 90%; word-wrap: break-word; color: #1E1E1E;"> 
+                                                                                                            <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                    <br />
+                                                                                                    <div v-if="fo.details" style="text-align: justify; color: #1E1E1E;">
+                                                                                                        <span>{{ fo.details }}</span>
+                                                                                                    </div>
+                                                                                                    <br />
+                                                                                                    <div v-if="fo.link" style="text-align: left;">
+                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <br />
+                                                                                    </td>
+                                                                                    <td style="width: 26px;"> </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                    <div v-else-if="fo.template == 5">
+                                                                        <table width="600">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td style="width: 26px;"> </td>
+                                                                                    <td style="width: 548px;">
+                                                                                        <br />
+                                                                                        <div>
+                                                                                            <div>
+                                                                                                <div>
+                                                                                                    <span v-if="fo.title" style="font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</span>
+                                                                                                    <br />
+                                                                                                    <div v-if="fo.details" style="text-align: justify; color: #1E1E1E;">
+                                                                                                        <span>{{ fo.details }}</span>
+                                                                                                    </div>
+                                                                                                    <br />
+                                                                                                    <div v-if="fo.link" style="text-align: left;">
+                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <br />
+                                                                                            <div>
+                                                                                                <img width="547" :src="fo.image" alt="">
                                                                                                 <div style="max-width: 90%; word-wrap: break-word; color: #1E1E1E;"> 
                                                                                                     <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
                                                                                                 </div>
                                                                                             </div>
-                                                                                            <br />
-                                                                                            <div v-if="fo.details" style="text-align: justify; color: #1E1E1E;">
-                                                                                                <span>{{ fo.details }}</span>
-                                                                                            </div>
-                                                                                            <br />
-                                                                                            <div v-if="fo.link" style="text-align: left;">
-                                                                                                <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
-                                                                                            </div>
                                                                                         </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div v-else-if="fo.template == 5">
-                                                                        <div>
-                                                                            <div style="padding: 20px;">
-                                                                                <div style="width: 100%;">
-                                                                                    <div style="width: 100%;">
-                                                                                        <div style="width: 100%;">
-                                                                                            <p v-if="fo.title" style="width: 100%; font-size: x-large; font-weight: 600; text-align: center; color: #000000; line-height: 2rem;">{{ fo.title }}</p>
-                                                                                            <div v-if="fo.details" style="text-align: justify; color: #1E1E1E;">
-                                                                                                <span>{{ fo.details }}</span>
-                                                                                            </div>
-                                                                                            <div v-if="fo.link" style="text-align: left;">
-                                                                                                <br />
-                                                                                                <a :href="fo.link" target="_blank"><img style="height: 25px;" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div>
                                                                                         <br />
-                                                                                        <img style="width: 100%;" :src="fo.image" alt="">
-                                                                                        <div style="max-width: 90%; word-wrap: break-word; color: #1E1E1E;"> 
-                                                                                            <i style="font-size: smaller; margin-top: 2px;">{{ fo.caption }}</i>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
+                                                                                    </td>
+                                                                                    <td style="width: 26px;"> </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
                                                                     </div>
-                                                                    <div v-else>
+                                                                    <!-- <div v-else>
                                                                         <div>
                                                                             <div style="padding: 20px;">
                                                                                 <p style="font-weight: 500; font-size: large; text-align: center; padding-top: 20px;">No Preview to Show!</p>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                 </div>
 
                                                                 <!-- FOOTER -->
-                                                                <div>
-                                                                    <div style="background-color: #00477a; color: #ffffff;" v-if="footerColor">
-                                                                        <div style="padding: 20px;">
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%;">
+                                                                <div style="width: 600px;">
+                                                                    <br />
+                                                                    <div style="width: 600px; height: 100%; background-color: #00477a; color: #ffffff;" v-if="footerColor">
+                                                                        <br />
+                                                                        <div>
+                                                                            <table width="600" style="background-color: #00477a; color: #ffffff;">
+                                                                                <tbody>
+                                                                                    <tr>
                                                                                         <td style="width: 2%;"> </td>
                                                                                         <td align="center">
                                                                                             <div>
                                                                                                 <div v-if="settings.country_office">
-                                                                                                    <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                    <img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
                                                                                                 </div>
 
                                                                                                 <div v-if="settings.project_office" style="margin-top: 8px;">
-                                                                                                    <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
+                                                                                                    <img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px; ">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="13" height="13" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img style="height: 17px;" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -349,16 +402,16 @@
                                                                                 </tbody>
                                                                             </table>
 
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%; border-top-style: solid; border-bottom-style: solid; border-width: 1.5px; border-color: #7f7f7f;">
+                                                                            <table width="600" style="background-color: #00477a; color: #ffffff;">
+                                                                                <tbody>
+                                                                                    <tr style="width: 600px; border-top-style: solid; border-bottom-style: solid; border-width: 1.5px; border-color: #7f7f7f;">
                                                                                         <td style="width: 10%;"></td>
                                                                                         
                                                                                         <td style="width: 20%;" align="center">
                                                                                             <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.fb_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img style="height: 18px;" src="https://api-swissnews.smicee.com/media/white-fb.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-fb.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -368,7 +421,7 @@
                                                                                             <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-x.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-x.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -378,7 +431,7 @@
                                                                                             <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.instagram_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-insta.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-insta.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -388,7 +441,7 @@
                                                                                             <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.linkedin_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img style="height: 16px;" src="https://api-swissnews.smicee.com/media/white-in.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-in.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div> 
@@ -398,9 +451,9 @@
                                                                                 </tbody>
                                                                             </table>
 
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%;">
+                                                                            <table width="600" style="background-color: #00477a; color: #ffffff;">
+                                                                                <tbody>
+                                                                                    <tr>
                                                                                         <td style="max-width: 2%;"> </td>
                                                                                         <td style="font-size: small; padding: 12px 8px 0px;" align="center">
                                                                                             <h7>© 2024, All Rights Reserved.</h7>
@@ -410,26 +463,27 @@
                                                                                 </tbody>
                                                                             </table>
                                                                         </div>
+                                                                        <br />
                                                                     </div>
                                                                     <div v-else>
-                                                                        <div style="padding: 20px;">
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%;">
+                                                                        <div style="width: 600px;">
+                                                                            <table width="600">
+                                                                                <tbody>
+                                                                                    <tr>
                                                                                         <td style="width: 2%;"> </td>
                                                                                         <td align="center">
                                                                                             <div>
                                                                                                 <div v-if="settings.country_office">
-                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                    <img width="18" height="18" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
                                                                                                 </div>
 
                                                                                                 <div v-if="settings.project_office" style="margin-top: 8px;">
-                                                                                                    <img width="19" height="19" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
+                                                                                                    <img width="18" height="18" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="18" height="18" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="19" height="19" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="18" height="18" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -437,16 +491,16 @@
                                                                                 </tbody>
                                                                             </table>
 
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%; border-top-style: solid; border-bottom-style: solid; border-width: 1.5px; border-color: #7f7f7f;">
+                                                                            <table width="600">
+                                                                                <tbody>
+                                                                                    <tr style="border-top-style: solid; border-width: 1.5px; border-color: #7f7f7f;">   
                                                                                         <td style="width: 10%;"></td>
                                                                                         
                                                                                         <td style="width: 20%;" align="center">
                                                                                             <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.fb_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/fb.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/fb.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -456,7 +510,7 @@
                                                                                             <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -466,7 +520,7 @@
                                                                                             <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.instagram_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/insta.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/insta.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -476,7 +530,7 @@
                                                                                             <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.linkedin_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img src="https://api-swissnews.smicee.com/media/in.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/in.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div> 
@@ -486,9 +540,9 @@
                                                                                 </tbody>
                                                                             </table>
 
-                                                                            <table style="width: 100%;">
-                                                                                <tbody style="width: 100%;">
-                                                                                    <tr style="width: 100%;">
+                                                                            <table width="600">
+                                                                                <tbody>
+                                                                                    <tr style="border-top-style: solid; border-width: 1.5px; border-color: #7f7f7f;">   
                                                                                         <td style="max-width: 2%;"> </td>
                                                                                         <td style="font-size: small; padding: 12px 8px 0px;" align="center">
                                                                                             <h7>© 2024, All Rights Reserved.</h7>
@@ -498,11 +552,12 @@
                                                                                 </tbody>
                                                                             </table>
                                                                         </div>
+                                                                        <br />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td> </td>
+                                                        <td style="width: 20px;"> </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
