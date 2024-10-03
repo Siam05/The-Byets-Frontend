@@ -7,9 +7,15 @@
                     <img v-if="demo_image" style="height: 120px; max-width: 100%; margin-bottom: 24px;" :src="demo_image" alt="">
                     <input type="file" accept="image/*" @change="uploadAttachment">
 
-                    <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
-                        <h7 class="mt-2" style="font-weight: 600;">Email</h7>
-                        <b-form-input v-model="image.email" type="text" placeholder="Enter email address"></b-form-input>
+                    <div class="content-width">
+                        <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+                            <h7 class="mt-2" style="font-weight: 600;">Email</h7>
+                            <b-form-input v-model="image.email" type="text" placeholder="Enter email address"></b-form-input>
+                        </div>
+                        <div style="width: 100%; display: flex; flex-direction: column; gap: 8px;">
+                            <h7 class="mt-2" style="font-weight: 600;">From</h7>
+                            <b-form-input v-model="image.from_email" type="text" placeholder="Enter from address"></b-form-input>
+                        </div>
                     </div>
 
                     <div class="content-width">
@@ -104,6 +110,7 @@ export default {
             image: {
                 image: null,
                 email: null,
+                from_email: null,
                 fb_link: null,
                 twitter_link: null,
                 instagram_link: null,
@@ -135,6 +142,7 @@ export default {
     watch: {
         settings(newValue, oldValue) {
             this.image.email = this.settings.email
+            this.image.from_email = this.settings.from_email
             this.image.fb_link = this.settings.fb_link
             this.image.twitter_link = this.settings.twitter_link
             this.image.instagram_link = this.settings.instagram_link
@@ -150,6 +158,7 @@ export default {
     created() {
         this.$store.dispatch('content/fetchSettings')
         this.image.email = this.settings.email
+        this.image.from_email = this.settings.from_email
         this.image.fb_link = this.settings.fb_link
         this.image.twitter_link = this.settings.twitter_link
         this.image.instagram_link = this.settings.instagram_link
@@ -175,6 +184,9 @@ export default {
         submitContent() {
             if(this.image.email == '') {
                 this.image.email = null
+            }
+            if(this.image.from_email == '') {
+                this.image.from_email = null
             }
             if(this.image.fb_link == '') {
                 this.image.fb_link = null
@@ -215,6 +227,7 @@ export default {
 
                     this.image.image = null
                     this.image.email = null
+                    this.image.from_email = null
                     this.image.fb_link = null
                     this.image.twitter_link = null
                     this.image.instagram_link = null
