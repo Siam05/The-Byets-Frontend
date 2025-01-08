@@ -60,7 +60,7 @@
                         </div>
                     </div>
 
-                    <b-button style="margin-top: 24px;" variant="primary" @click="submitContent">Upload</b-button>
+                    <b-button style="margin-top: 24px;" variant="primary" @click="submitContent">Save</b-button>
                 </div>
             </div>
         </div>
