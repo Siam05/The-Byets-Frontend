@@ -128,7 +128,7 @@ export default {
 
     data() {
         return {
-            host: 'https://api-swissnews.smicee.com',
+            host: 'https://api-newsletter.byets.org',
             dir: false,
             searchTerm: '',
             image_blogs: [],

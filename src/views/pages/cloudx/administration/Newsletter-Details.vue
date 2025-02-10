@@ -206,7 +206,7 @@
                                                                                             <br />
                                                                                             <div style="text-align: left;">
                                                                                                 <div v-if="fo.link" style="text-align: left;">
-                                                                                                    <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                    <a :href="fo.link" target="_blank"><img height="26" src="https://api-newsletter.byets.org/media/read_more.png" alt=""></a>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -244,7 +244,7 @@
                                                                                             </div>
                                                                                             <br />
                                                                                             <div v-if="fo.link" style="text-align: left;">
-                                                                                                <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                <a :href="fo.link" target="_blank"><img height="26" src="https://api-newsletter.byets.org/media/read_more.png" alt=""></a>
                                                                                             </div>
                                                                                         </div>
                                                                                         <br />
@@ -281,7 +281,7 @@
                                                                                             </div>
                                                                                             <br />
                                                                                             <div v-if="fo.link" style="text-align: left;">
-                                                                                                <a :href="fo.link" target="_blank"><img height="26"src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                <a :href="fo.link" target="_blank"><img height="26"src="https://api-newsletter.byets.org/media/read_more.png" alt=""></a>
                                                                                             </div>
                                                                                         </div>
                                                                                         <br />
@@ -315,7 +315,7 @@
                                                                                                     </div>
                                                                                                     <br />
                                                                                                     <div v-if="fo.link" style="text-align: left;">
-                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-newsletter.byets.org/media/read_more.png" alt=""></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -344,7 +344,7 @@
                                                                                                     </div>
                                                                                                     <br />
                                                                                                     <div v-if="fo.link" style="text-align: left;">
-                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-swissnews.smicee.com/media/read_more.png" alt=""></a>
+                                                                                                        <a :href="fo.link" target="_blank"><img height="26" src="https://api-newsletter.byets.org/media/read_more.png" alt=""></a>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
@@ -385,16 +385,16 @@
                                                                                         <td align="center">
                                                                                             <div>
                                                                                                 <div v-if="settings.country_office">
-                                                                                                    <img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                    <img width="14" height="14" src="https://api-newsletter.byets.org/media/white-location.png" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
                                                                                                 </div>
 
                                                                                                 <div v-if="settings.project_office" style="margin-top: 8px;">
-                                                                                                    <img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-location.png" alt=""><span style="padding-left: 8px; ">{{ settings.project_office }}</span>
+                                                                                                    <img width="14" height="14" src="https://api-newsletter.byets.org/media/white-location.png" alt=""><span style="padding-left: 8px; ">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="13" height="13" src="https://api-swissnews.smicee.com/media/white-phone.png" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="13" height="13" src="https://api-newsletter.byets.org/media/white-phone.png" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="14" height="14" src="https://api-swissnews.smicee.com/media/white-link.png" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="14" height="14" src="https://api-newsletter.byets.org/media/white-link.png" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -411,7 +411,7 @@
                                                                                             <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.fb_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-fb.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-newsletter.byets.org/media/white-fb.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -421,7 +421,7 @@
                                                                                             <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-x.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-newsletter.byets.org/media/white-x.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -431,7 +431,7 @@
                                                                                             <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.instagram_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-insta.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-newsletter.byets.org/media/white-insta.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -441,7 +441,7 @@
                                                                                             <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.linkedin_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="18" height="18" src="https://api-swissnews.smicee.com/media/white-in.png" alt="">
+                                                                                                        <img width="18" height="18" src="https://api-newsletter.byets.org/media/white-in.png" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div> 
@@ -474,16 +474,16 @@
                                                                                         <td align="center">
                                                                                             <div>
                                                                                                 <div v-if="settings.country_office">
-                                                                                                    <img width="18" height="18" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
+                                                                                                    <img width="18" height="18" src="https://api-newsletter.byets.org/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.country_office }}</span>
                                                                                                 </div>
 
                                                                                                 <div v-if="settings.project_office" style="margin-top: 8px;">
-                                                                                                    <img width="18" height="18" src="https://api-swissnews.smicee.com/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
+                                                                                                    <img width="18" height="18" src="https://api-newsletter.byets.org/media/location.jpg" alt=""><span style="padding-left: 8px;">{{ settings.project_office }}</span>
                                                                                                 </div>
 
-                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="18" height="18" src="https://api-swissnews.smicee.com/media/phone.jpg" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
+                                                                                                <div v-if="settings.phone" style="margin-top: 8px;"><img width="18" height="18" src="https://api-newsletter.byets.org/media/phone.jpg" alt=""><span style="padding-left: 8px;">{{ settings.phone }}</span></div>
 
-                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="18" height="18" src="https://api-swissnews.smicee.com/media/link.jpg" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
+                                                                                                <p v-if="settings.website" style="margin-top: 8px; width: 88%; word-break: break-all;"><img width="18" height="18" src="https://api-newsletter.byets.org/media/link.jpg" alt=""><span style="padding-left: 8px;">{{ settings.website }}</span></p>
                                                                                             </div>
                                                                                         </td>
                                                                                         <td style="width: 2%;"> </td>
@@ -500,7 +500,7 @@
                                                                                             <div v-if="settings.fb_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.fb_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/fb.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-newsletter.byets.org/media/fb.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -510,7 +510,7 @@
                                                                                             <div v-if="settings.twitter_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.twitter_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/x.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-newsletter.byets.org/media/x.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -520,7 +520,7 @@
                                                                                             <div v-if="settings.instagram_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.instagram_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/insta.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-newsletter.byets.org/media/insta.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div>
@@ -530,7 +530,7 @@
                                                                                             <div v-if="settings.linkedin_link" style="margin: 0px 4px; padding-top: 16px; padding-bottom: 16px;">
                                                                                                 <a :href="settings.linkedin_link" target="_blank">
                                                                                                     <div style="padding-top: 4px; padding-bottom: 4px;">
-                                                                                                        <img width="22" height="22" src="https://api-swissnews.smicee.com/media/in.jpg" alt="">
+                                                                                                        <img width="22" height="22" src="https://api-newsletter.byets.org/media/in.jpg" alt="">
                                                                                                     </div>
                                                                                                 </a>
                                                                                             </div> 
@@ -737,7 +737,7 @@ export default {
     data() {
         return {
             test: true,
-            host: 'https://api-swissnews.smicee.com',
+            host: 'https://api-newsletter.byets.org',
             selected_image: null,
             nameState: null,
             dir: false,

@@ -1,5 +1,5 @@
-var host = "https://api-swissnews.smicee.com"; 
-var hostCB = "https://api-swissnews.smicee.com";
+var host = "https://api-newsletter.byets.org"; 
+var hostCB = "https://api-newsletter.byets.org";
 
 module.exports = { 
     V1API : {
